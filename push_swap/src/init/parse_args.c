@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 20:49:18 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/09 19:13:51 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/09 19:28:28 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,3 +44,4 @@ char	**get_clean_args(int argc, char **argv)
 	}
 	return (NULL);
 }
+

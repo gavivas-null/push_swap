@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   validate.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/08 19:21:34 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/09 19:47:41 by gavivas-         ###   ########.fr       */
+/*   Created: 2025/05/09 19:28:52 by gavivas-          #+#    #+#             */
+/*   Updated: 2025/05/09 19:49:20 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	main(int argc, char **argv)
+int	ft_is_valid_number(char *str)
 {
-	int		i;
-	char	**args;
+	int i;
 
 	i = 0;
-	args = get_clean_args(argc, argv);
-	if (!args)
-		return (ft_printf("Error: argumentos inválidos\n"), 1);
-	while (args[i])
-	{
-		if (!ft_is_valid_number(args[i]))
-			return (ft_printf("Error.\n"), 1);
+	if (!str || !str[0])
+		return (0);
+	if (str[i] == '+' || str[i] == '-')
 		i++;
-	}
-	i = 0;
-	while (args[i])
+	if (str[i] == '\0')
+		return (0);
+	while (str[i])
 	{
-		ft_printf("%s\n", args[i]);
-		i++;
+		if (!ft_isdigit(str[i]))
+			return (0);
+		else
+			i++;
 	}
-	return (0);
+	return (1);
 }

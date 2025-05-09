@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 18:20:48 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/09 19:14:36 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/09 19:39:19 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ typedef struct s_node
 }	t_node;
 
 char	**get_clean_args(int argc, char **argv);
+int		ft_is_valid_number(char *str);
 
 #endif

@@ -6,6 +6,7 @@ CFLAGS = -Wall -Wextra -Werror -g
 
 SRCS =	src/push_swap.c \
 		src/init/parse_args.c \
+		src/utils/validate.c
 
 OBJS = $(SRCS:.c=.o)
 INCLUDES = -I include -I Libft
