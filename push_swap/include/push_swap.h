@@ -6,14 +6,13 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 18:20:48 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/09 19:39:19 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/12 19:58:42 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -28,5 +27,13 @@ typedef struct s_node
 
 char	**get_clean_args(int argc, char **argv);
 int		ft_is_valid_number(char *str);
+t_node	*build_stack(char **args);
+
+//---------------------------List---------------------------
+t_node	*new_node(int value);
+t_node	*last_node(t_node *lst);
+void	add_back(t_node **lst, t_node *new);
+void	add_front(t_node **lst, t_node *new);
+void	clear_stack(t_node **lst);
 
 #endif

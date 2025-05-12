@@ -1,46 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   build_stack.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/08 19:21:34 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/12 20:25:39 by gavivas-         ###   ########.fr       */
+/*   Created: 2025/05/12 18:28:06 by gavivas-          #+#    #+#             */
+/*   Updated: 2025/05/12 20:17:52 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	main(int argc, char **argv)
+t_node	*build_stack(char **args)
 {
+	t_node	*stack;
+	t_node	*node;
 	int		i;
-	char	**args;
-	t_node	*stack_a;
-	t_node	*temp;
+	int		value;
 
 	i = 0;
-	args = get_clean_args(argc, argv);
-	if (!args)
-		return (ft_printf("Error: argumentos inválidos\n"), 1);
+	stack = NULL;
 	while (args[i])
 	{
-		if (!ft_is_valid_number(args[i]))
-		{
-			ft_free_split(args);	
-			return (ft_printf("Error.\n"), 1);
-		}
+		value = ft_atoi(args[i]);
+		node = new_node(value);
+		add_back(&stack, node);
 		i++;
 	}
-	i = 0;
-	stack_a = build_stack(args);
-	temp = stack_a;
-	while (temp)
-	{
-		ft_printf("%d\n", temp->value);
-		temp = temp->next;
-	}
-	clear_stack(&stack_a);
-	ft_free_split(args);
-	return (0);
+	return (stack);
 }

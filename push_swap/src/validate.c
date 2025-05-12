@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 19:28:52 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/09 19:49:20 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/12 19:41:25 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_is_valid_number(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!str || !str[0])
