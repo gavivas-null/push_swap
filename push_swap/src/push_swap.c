@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:21:34 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/12 20:47:24 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/12 21:21:40 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,18 @@ int	main(int argc, char **argv)
 		}
 		i++;
 	}
+	if (has_duplicates(args))
+	{
+		ft_free_split(args);
+		return (ft_printf("Error: números duplicados\n"), 1);
+	}
 	i = 0;
 	stack_a = build_stack(args);
 	assign_index(stack_a);
+	if (is_sorted(stack_a))
+		ft_printf("El stack ya está ordenado\n");
+	else
+		ft_printf("El stack NO está ordenado\n");
 	temp = stack_a;
 	while (temp)
 	{
