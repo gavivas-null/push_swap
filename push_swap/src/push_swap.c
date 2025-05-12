@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:21:34 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/12 20:25:39 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/12 20:47:24 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,11 @@ int	main(int argc, char **argv)
 	}
 	i = 0;
 	stack_a = build_stack(args);
+	assign_index(stack_a);
 	temp = stack_a;
 	while (temp)
 	{
-		ft_printf("%d\n", temp->value);
+		ft_printf("value: %d, index: %d\n", temp->value, temp->index);
 		temp = temp->next;
 	}
 	clear_stack(&stack_a);

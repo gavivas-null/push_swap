@@ -9,6 +9,7 @@ SRCS =	src/push_swap.c \
 		src/validate.c \
 		src/build_stack.c \
 		src/list_stack.c \
+		src/assign_index.c
 
 OBJS = $(SRCS:.c=.o)
 INCLUDES = -I include -I Libft
