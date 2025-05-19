@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 20:49:18 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/12 19:40:48 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/19 17:11:20 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,12 @@ char	**get_clean_args(int argc, char **argv)
 	if (argc == 2)
 	{
 		args = ft_split(argv[1], ' ');
-		if (!args)
+		if (!args || !args[0])
+		{
+			if (args)
+				ft_free_split(args);
 			return (NULL);
+		}
 		return (args);
 	}
 	else if (argc > 2)
@@ -39,6 +43,13 @@ char	**get_clean_args(int argc, char **argv)
 			i++;
 		}
 		args = ft_split(joined, ' ');
+		if (!args || !args[0])
+		{
+			if (args)
+				ft_free_split(args);
+			free(joined);
+			return (NULL);
+		}
 		free(joined);
 		return (args);
 	}
