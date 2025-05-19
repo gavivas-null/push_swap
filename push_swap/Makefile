@@ -11,7 +11,8 @@ SRCS =	src/push_swap.c \
 		src/list_stack.c \
 		src/assign_index.c \
 		src/sorted.c \
-		src/duplicates.c
+		src/duplicates.c \
+		src/range.c
 
 OBJS = $(SRCS:.c=.o)
 INCLUDES = -I include -I Libft

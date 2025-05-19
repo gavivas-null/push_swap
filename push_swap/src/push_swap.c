@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:21:34 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/12 21:21:40 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/19 17:43:46 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int	main(int argc, char **argv)
 		return (ft_printf("Error: argumentos inválidos\n"), 1);
 	while (args[i])
 	{
-		if (!ft_is_valid_number(args[i]))
+		if (!ft_is_valid_number(args[i]) || !is_int_range(args[i]))
 		{
-			ft_free_split(args);	
+			ft_free_split(args);
 			return (ft_printf("Error.\n"), 1);
 		}
 		i++;

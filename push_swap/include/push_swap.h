@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 18:20:48 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/12 21:11:31 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/19 17:38:09 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 # include "../Libft/libft.h"
 
@@ -31,6 +32,8 @@ t_node	*build_stack(char **args);
 void	assign_index(t_node *stack);
 int		is_sorted(t_node *stack);
 int		has_duplicates(char **args);
+int		is_int_range(char *str);
+
 
 //---------------------------List---------------------------
 t_node	*new_node(int value);

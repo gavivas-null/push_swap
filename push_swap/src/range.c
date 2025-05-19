@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorted.c                                           :+:      :+:    :+:   */
+/*   range.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 20:52:36 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/19 17:19:24 by gavivas-         ###   ########.fr       */
+/*   Created: 2025/05/19 17:22:48 by gavivas-          #+#    #+#             */
+/*   Updated: 2025/05/19 17:37:29 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	is_sorted(t_node *stack)
+int	is_int_range(char *str)
 {
-	t_node	*temp;
+	long long	a;
+	int	i;
+	int	sign;
 
-	temp = stack;
-	while (temp->next)
+	a = 0;
+	i = 0;
+	sign = 1;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '+' || str[i] == '-')
 	{
-		if (temp->index > temp->next->index)
-			return (0);
-		temp = temp->next;
+		if (str[i] == '-')
+			sign = sign * (-1);
+		i++;
 	}
-	return (1);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		a = a * 10 + (str[i] - '0');
+		i++;
+	}
+	if ((a * sign) > INT_MAX || (a * sign) < INT_MIN)
+		return (0);
+	return  (1);
 }

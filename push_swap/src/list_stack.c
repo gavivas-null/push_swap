@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 19:22:10 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/12 19:23:46 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/19 17:18:41 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	clear_stack(t_node **lst)
 	while (*lst)
 	{
 		aux = (*lst)->next;
-		free(*lst);
+		free (*lst);
 		*lst = aux;
 	}
 }
