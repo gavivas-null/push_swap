@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:21:34 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/19 17:43:46 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/20 18:48:06 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int	main(int argc, char **argv)
 	else
 		ft_printf("El stack NO está ordenado\n");
 	temp = stack_a;
+	sa(&stack_a);
 	while (temp)
 	{
 		ft_printf("value: %d, index: %d\n", temp->value, temp->index);
