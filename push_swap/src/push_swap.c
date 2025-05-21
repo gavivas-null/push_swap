@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:21:34 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/20 18:48:06 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/21 19:32:04 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	main(int argc, char **argv)
 	int		i;
 	char	**args;
 	t_node	*stack_a;
+	t_node	*stack_b;
 	t_node	*temp;
 
 	i = 0;
@@ -39,13 +40,15 @@ int	main(int argc, char **argv)
 	}
 	i = 0;
 	stack_a = build_stack(args);
+	stack_b = NULL;
 	assign_index(stack_a);
 	if (is_sorted(stack_a))
 		ft_printf("El stack ya está ordenado\n");
 	else
 		ft_printf("El stack NO está ordenado\n");
 	temp = stack_a;
-	sa(&stack_a);
+	/* sa(&stack_a); */
+	pd(&stack_b, &stack_a);
 	while (temp)
 	{
 		ft_printf("value: %d, index: %d\n", temp->value, temp->index);

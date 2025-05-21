@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 18:09:22 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/20 18:37:38 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/21 18:40:10 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,17 @@ void	sa(t_node **stack)
 	(*stack)->next->value = tmp_value;
 	(*stack)->next->index = tmp_index;
 	ft_printf("sa\n");
+}
+
+void	pd(t_node **b, t_node **a)
+{
+	t_node *tmp;
+
+	if (*a == NULL)
+		return ;
+	tmp = *a;
+	*a = (*a)->next;
+	tmp->next = *b;
+	*b = tmp;
+	ft_printf("pb\n");
 }
