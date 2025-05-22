@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabrielvivas <gabrielvivas@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 18:20:48 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/21 18:33:13 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/22 21:28:10 by gabrielviva      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,17 @@ int		has_duplicates(char **args);
 int		is_int_range(char *str);
 
 //------------------------Algorithm------------------------
-void	sa(t_node **stack);
-void	pd(t_node **b, t_node **a);
+void	sa(t_node **a);
+void	sb(t_node **b);
+void	ss(t_node **a, t_node **b);
+void	pb(t_node **b, t_node **a);
+void	pa(t_node **a, t_node **b);
+void	ra(t_node **a);
+void	rb(t_node **b);
+void	rr(t_node **a, t_node **b);
+void	rra(t_node **a);
+void	rrb(t_node **b);
+void	rrr(t_node **a, t_node **b);
 
 //---------------------------List---------------------------
 t_node	*new_node(int value);

@@ -6,7 +6,7 @@
 /*   By: gabrielvivas <gabrielvivas@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:21:34 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/22 19:46:09 by gabrielviva      ###   ########.fr       */
+/*   Updated: 2025/05/22 21:28:56 by gabrielviva      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,21 @@ int	main(int argc, char **argv)
 		ft_free_split(args);
 		return (ft_printf("Error: números duplicados\n"), 1);
 	}
-	i = 0;
 	stack_a = build_stack(args);
-	stack_b = NULL;
+	stack_b = build_stack(args);
 	assign_index(stack_a);
-	if (is_sorted(stack_a))
-		ft_printf("El stack ya está ordenado\n");
-	else
-		ft_printf("El stack NO está ordenado\n");
+	assign_index(stack_b);
+	rrr(&stack_a, &stack_b);
+	ft_printf("STACK A (tras rrr):\n");
 	temp = stack_a;
+	while (temp)
+	{
+		ft_printf("value: %d, index: %d\n", temp->value, temp->index);
+		temp = temp->next;
+	}
+	
+	ft_printf("STACK B (tras rrr):\n");
+	temp = stack_b;
 	while (temp)
 	{
 		ft_printf("value: %d, index: %d\n", temp->value, temp->index);
