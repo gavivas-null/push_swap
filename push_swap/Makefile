@@ -5,15 +5,16 @@ CFLAGS = -Wall -Wextra -Werror -g
 #CFLAGS += -fsanitize=address
 
 SRCS =	src/push_swap.c \
-		src/parse_args.c \
-		src/validate.c \
-		src/build_stack.c \
 		src/list_stack.c \
-		src/assign_index.c \
-		src/sorted.c \
-		src/duplicates.c \
-		src/range.c \
-		src/algorithm.c
+		src/parsing/assign_index.c \
+		src/parsing/build_stack.c \
+		src/parsing/duplicates.c \
+		src/parsing/parse_args.c \
+		src/parsing/range.c \
+		src/parsing/sorted.c \
+		src/parsing/validate.c \
+		src/algorithm/algorithm.c
+
 
 OBJS = $(SRCS:.c=.o)
 INCLUDES = -I include -I Libft
