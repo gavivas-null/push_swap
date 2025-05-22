@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabrielvivas <gabrielvivas@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:21:34 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/21 19:32:04 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/22 19:46:09 by gabrielviva      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,6 @@ int	main(int argc, char **argv)
 	else
 		ft_printf("El stack NO está ordenado\n");
 	temp = stack_a;
-	/* sa(&stack_a); */
-	pd(&stack_b, &stack_a);
 	while (temp)
 	{
 		ft_printf("value: %d, index: %d\n", temp->value, temp->index);

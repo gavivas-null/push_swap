@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algorithm.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gabrielvivas <gabrielvivas@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 18:09:22 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/21 18:40:10 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/22 19:49:06 by gabrielviva      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,9 @@ void	pd(t_node **b, t_node **a)
 	tmp->next = *b;
 	*b = tmp;
 	ft_printf("pb\n");
+}
+
+void	pa(t_node **a, t_node **b)
+{
+	
 }

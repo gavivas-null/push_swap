@@ -1,0 +1,20 @@
+# Archivos de compilación
+*.o
+*.out
+*.a
+*.gch
+
+# Binario generado
+push_swap
+
+# Archivos de sistema
+.DS_Store
+
+# Carpetas de caché u objetos
+__pycache__/
+.vscode/
+.idea/
+
+# Valgrind logs (si los usas)
+valgrind*.log
+vgcore.*
