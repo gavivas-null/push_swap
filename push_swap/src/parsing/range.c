@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 17:22:48 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/19 17:37:29 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/26 18:27:09 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	is_int_range(char *str)
 {
 	long long	a;
-	int	i;
-	int	sign;
+	int			i;
+	int			sign;
 
 	a = 0;
 	i = 0;
@@ -36,5 +36,5 @@ int	is_int_range(char *str)
 	}
 	if ((a * sign) > INT_MAX || (a * sign) < INT_MIN)
 		return (0);
-	return  (1);
+	return (1);
 }

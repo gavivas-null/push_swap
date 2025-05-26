@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabrielvivas <gabrielvivas@student.42.f    +#+  +:+       +#+        */
+/*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 18:20:48 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/22 21:28:10 by gabrielviva      ###   ########.fr       */
+/*   Updated: 2025/05/26 18:20:05 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,19 @@ void	rra(t_node **a);
 void	rrb(t_node **b);
 void	rrr(t_node **a, t_node **b);
 
-//---------------------------List---------------------------
+//------------------------Sort------------------------
+void	sort_two(t_node **a);
+void	sort_three(t_node **a);
+void	sort_five(t_node **a, t_node **b);
+void	sort_radix(t_node **a, t_node **b);
+
+//------------------------List------------------------
 t_node	*new_node(int value);
 t_node	*last_node(t_node *lst);
 void	add_back(t_node **lst, t_node *new);
 void	add_front(t_node **lst, t_node *new);
 void	clear_stack(t_node **lst);
+int		count_nodes(t_node *lst);
+
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algorithm.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabrielvivas <gabrielvivas@student.42.f    +#+  +:+       +#+        */
+/*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 18:09:22 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/22 21:27:23 by gabrielviva      ###   ########.fr       */
+/*   Updated: 2025/05/26 18:25:43 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -190,7 +190,7 @@ void	rrr(t_node **a, t_node **b)
 			before_last = before_last->next;
 		before_last->next = NULL;
 		tmp->next = *a;
-		*a = tmp;	
+		*a = tmp;
 	}
 	if (*b && (*b)->next)
 	{

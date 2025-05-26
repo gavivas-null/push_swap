@@ -13,7 +13,8 @@ SRCS =	src/push_swap.c \
 		src/parsing/range.c \
 		src/parsing/sorted.c \
 		src/parsing/validate.c \
-		src/algorithm/algorithm.c
+		src/algorithm/algorithm.c \
+		src/sort/sort.c
 
 
 OBJS = $(SRCS:.c=.o)

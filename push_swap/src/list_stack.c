@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 19:22:10 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/19 17:18:41 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/26 18:24:55 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,19 @@ t_node	*new_node(int value)
 	new->index = 0;
 	new->next = NULL;
 	return (new);
+}
+
+int	count_nodes(t_node *lst)
+{
+	t_node	*tmp;
+	int		count;
+
+	count = 0;
+	tmp = lst;
+	while (tmp != NULL)
+	{
+		count++;
+		tmp = tmp->next;
+	}
+	return (count);
 }
