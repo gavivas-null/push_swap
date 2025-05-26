@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:21:34 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/26 18:28:22 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/26 19:37:45 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ int	main(int argc, char **argv)
 	assign_index(stack_a);
 	if (!is_sorted(stack_a) && count_nodes(stack_a) == 2)
 		sort_two(&stack_a);
+	else if (!is_sorted(stack_a) && count_nodes(stack_a) == 3)
+		sort_three(&stack_a);	
 	clear_stack(&stack_a);
 	ft_free_split(args);
 	return (0);
