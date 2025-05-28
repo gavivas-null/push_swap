@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 18:20:48 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/26 18:20:05 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/28 19:57:19 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ void	add_back(t_node **lst, t_node *new);
 void	add_front(t_node **lst, t_node *new);
 void	clear_stack(t_node **lst);
 int		count_nodes(t_node *lst);
+int		position_of_index(t_node *stack, int target_index);
+void	move_to_top_and_push(t_node **a, t_node **b, int index, int total);
 
 
 #endif

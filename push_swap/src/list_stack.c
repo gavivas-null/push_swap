@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 19:22:10 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/26 18:24:55 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/28 20:04:55 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,4 +83,50 @@ int	count_nodes(t_node *lst)
 		tmp = tmp->next;
 	}
 	return (count);
+}
+
+int	position_of_index(t_node *stack, int target_index)
+{
+	int	pos;
+	t_node *tmp;
+
+	pos = 0;
+	tmp = stack;
+	while (tmp != NULL)
+	{
+		if (tmp->index == target_index)
+			return (pos);
+		else
+			tmp = tmp->next;
+		pos++;
+	}
+	return (-1);
+}
+
+void	move_to_top_and_push(t_node **a, t_node **b, int index, int total)
+{
+	int	pos;
+	int	steps;
+
+	pos = position_of_index(*a, index);
+	steps = total - pos;
+	if (pos <= (total / 2))
+	{
+		steps = pos;
+		while (steps > 0)
+		{
+			ra(a);
+			steps--;
+		}
+	}
+	else
+	{
+		steps = total - pos;
+		while (steps > 0)
+		{
+			rra(a);
+			steps--;
+		}	
+	}
+	pb(b, a);
 }

@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:21:34 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/26 19:37:45 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/28 20:35:00 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,15 @@
 int	main(int argc, char **argv)
 {
 	int		i;
+	int		size;
 	char	**args;
 	t_node	*stack_a;
+	t_node	*stack_b;
 
 	i = 0;
 	args = get_clean_args(argc, argv);
+	if (argc < 2)
+		return (ft_printf("Error.\nNo se pasaron argumentos.\n"), 1);
 	if (!args)
 		return (ft_printf("Error: argumentos inválidos\n"), 1);
 	while (args[i])
@@ -37,11 +41,20 @@ int	main(int argc, char **argv)
 		return (ft_printf("Error: números duplicados\n"), 1);
 	}
 	stack_a = build_stack(args);
+	stack_b = NULL;
+	size = count_nodes(stack_a);
+	if (size == 1)
+	{
+		ft_free_split(args);
+		return (ft_printf("Error. Minimo 2 numeros\n"), 1);
+	}
 	assign_index(stack_a);
-	if (!is_sorted(stack_a) && count_nodes(stack_a) == 2)
+	if (!is_sorted(stack_a) && size == 2)
 		sort_two(&stack_a);
-	else if (!is_sorted(stack_a) && count_nodes(stack_a) == 3)
-		sort_three(&stack_a);	
+	else if (!is_sorted(stack_a) && size == 3)
+		sort_three(&stack_a);
+	else if (!is_sorted(stack_a) && (size == 5 || size == 4))
+		sort_five(&stack_a, &stack_b);
 	clear_stack(&stack_a);
 	ft_free_split(args);
 	return (0);

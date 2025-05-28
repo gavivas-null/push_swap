@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 20:49:18 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/26 18:26:10 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/28 20:34:47 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	**get_clean_args(int argc, char **argv)
 	char	**args;
 	char	*joined;
 
-	if (argc < 2)
-		return (ft_printf("Error.\nNo se pasaron argumentos.\n"), NULL);
 	i = 1;
 	if (argc == 2)
 	{
