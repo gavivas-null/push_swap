@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 18:20:48 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/28 19:57:19 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/30 18:35:27 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ typedef struct s_node
 
 //------------------------Parsing------------------------
 char	**get_clean_args(int argc, char **argv);
+char	**join_and_split_args(int argc, char **argv);
+char	**split_single_arg(char *argv);
 int		ft_is_valid_number(char *str);
 t_node	*build_stack(char **args);
 void	assign_index(t_node *stack);
@@ -35,7 +37,7 @@ int		is_sorted(t_node *stack);
 int		has_duplicates(char **args);
 int		is_int_range(char *str);
 
-//------------------------Algorithm------------------------
+//------------------------Moves------------------------
 void	sa(t_node **a);
 void	sb(t_node **b);
 void	ss(t_node **a, t_node **b);
@@ -63,6 +65,5 @@ void	clear_stack(t_node **lst);
 int		count_nodes(t_node *lst);
 int		position_of_index(t_node *stack, int target_index);
 void	move_to_top_and_push(t_node **a, t_node **b, int index, int total);
-
 
 #endif

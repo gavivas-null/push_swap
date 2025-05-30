@@ -6,50 +6,55 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 20:49:18 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/28 20:34:47 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/30 18:32:45 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-char	**get_clean_args(int argc, char **argv)
+char	**split_single_arg(char *argv)
 {
-	int		i;
+	char	**args;
+
+	args = ft_split(argv, ' ');
+	if (!args || !args[0])
+	{
+		if (args)
+			ft_free_split(args);
+		return (NULL);
+	}
+	return (args);
+}
+
+char	**join_and_split_args(int argc, char **argv)
+{
 	char	**args;
 	char	*joined;
+	int		i;
 
-	i = 1;
+	joined = ft_strdup(argv[1]);
+	i = 2;
+	while (i < argc)
+	{
+		joined = ft_strjoin_free(joined, " ");
+		joined = ft_strjoin_free(joined, argv[i]);
+		i++;
+	}
+	args = ft_split(joined, ' ');
+	if (!args || !args[0])
+	{
+		if (args)
+			ft_free_split(args);
+		return (free(joined), NULL);
+	}
+	return (free(joined), args);
+}
+
+char	**get_clean_args(int argc, char **argv)
+{
 	if (argc == 2)
-	{
-		args = ft_split(argv[1], ' ');
-		if (!args || !args[0])
-		{
-			if (args)
-				ft_free_split(args);
-			return (NULL);
-		}
-		return (args);
-	}
+		return (split_single_arg(argv[1]));
 	else if (argc > 2)
-	{
-		joined = ft_strdup(argv[1]);
-		i = 2;
-		while (i < argc)
-		{
-			joined = ft_strjoin_free(joined, " ");
-			joined = ft_strjoin_free(joined, argv[i]);
-			i++;
-		}
-		args = ft_split(joined, ' ');
-		if (!args || !args[0])
-		{
-			if (args)
-				ft_free_split(args);
-			free(joined);
-			return (NULL);
-		}
-		free(joined);
-		return (args);
-	}
+		return (join_and_split_args(argc, argv));
 	return (NULL);
 }
