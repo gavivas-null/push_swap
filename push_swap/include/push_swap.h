@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 18:20:48 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/30 18:35:27 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/31 21:55:15 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ typedef struct s_node
 char	**get_clean_args(int argc, char **argv);
 char	**join_and_split_args(int argc, char **argv);
 char	**split_single_arg(char *argv);
-int		ft_is_valid_number(char *str);
 t_node	*build_stack(char **args);
 void	assign_index(t_node *stack);
 int		is_sorted(t_node *stack);
 int		has_duplicates(char **args);
-int		is_int_range(char *str);
+int		has_empty_or_space_args(int argc, char **argv);
+int		validate_error(int argc, char **argv, char **args);
 
 //------------------------Moves------------------------
 void	sa(t_node **a);

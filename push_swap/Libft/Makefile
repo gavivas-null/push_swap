@@ -52,6 +52,10 @@ SRCGNL		=	get_next_line.c \
 
 SRCETC		= 	ft_free_split.c \
 				ft_strjoin_free.c \
+				ft_calc_bits.c \
+				ft_is_bit_set.c \
+				ft_is_int_range.c \
+				ft_is_valid_number.c \
 
 SRCALL	=	$(SRC) $(SRCBONUS) $(SRCPRINTF) $(SRCGNL) $(SRCETC)
 OBJ	=	$(SRCALL:.c=.o)
@@ -62,10 +66,17 @@ CFLAGS	=	-Wall -Werror -Wextra
 ARFLAG = -rcs
 NAME =	libft.a
 
+# --------------------------------------------------------------
+# 👇 Regla principal
+# --------------------------------------------------------------
 all: ${NAME}
 
 ${NAME}: ${OBJ}
-	$(AR) $(ARFLAG) $(NAME) $(OBJ) 
+	$(AR) $(ARFLAG) $(NAME) $(OBJ)
+
+# --------------------------------------------------------------
+# 🧹 Limpieza
+# --------------------------------------------------------------
 
 clean:
 	rm -f ${OBJ}

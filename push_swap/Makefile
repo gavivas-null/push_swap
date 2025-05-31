@@ -20,7 +20,7 @@ SRCS =	src/push_swap.c \
 		src/sort/sort_two.c \
 		src/sort/sort_three.c \
 		src/sort/sort_five.c \
-		src/sort/sort_radix.c \
+		src/sort/sort_radix.c
 
 OBJS = $(SRCS:.c=.o)
 INCLUDES = -I include -I Libft

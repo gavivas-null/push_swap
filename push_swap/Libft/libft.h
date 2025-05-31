@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:57:22 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/12 20:12:48 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/05/31 21:54:07 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@
 # include <stdint.h>
 # include <fcntl.h>
 # include <stdarg.h>
+# include <limits.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE  42
 # endif
 
-//libft
+//------------------------libft------------------------
 
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
@@ -74,7 +75,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-//get_next_line
+//------------------------get_next_line------------------------
 
 char	*get_next_line(int fd);
 size_t	ft_gnl_strlen(const char *s);
@@ -82,7 +83,7 @@ char	*ft_gnl_strjoin(char *s1, char *s2);
 char	*ft_gnl_strchr(const char *s, int c);
 char	*ft_gnl_substr(char const *s, unsigned int start, size_t len);
 
-//ft_printf
+//------------------------ft_printf------------------------
 
 int		ft_printf(char const *str, ...);
 int		ft_putchar(int c);
@@ -92,9 +93,13 @@ int		ft_putptr(void *ptr, const char *hex);
 int		ft_putstr(char *str);
 int		ft_puthex(unsigned long n, const char *hex);
 
-//extras.
+//------------------------extras------------------------
 
 void	ft_free_split(char **split);
 char	*ft_strjoin_free(char *s1, char *s2);
+int		calc_bits(int max_index);
+int		is_bit_set(int index, int bit_position);
+int		ft_is_valid_number(char *str);
+int		is_int_range(char *str);
 
 #endif
