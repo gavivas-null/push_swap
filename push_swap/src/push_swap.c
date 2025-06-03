@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:21:34 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/06/01 20:07:44 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/06/02 21:08:32 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	sorted_cases(t_node **stack_a, t_node **stack_b, int size)
 		else if (size == 5 || size == 4)
 			sort_five(stack_a, stack_b);
 		else if (size >= 6)
-			sort_radix(stack_a, stack_b);
+			sort_ksort(stack_a, stack_b);
 	}
 }
 

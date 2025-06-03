@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 18:57:22 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/31 21:54:07 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/06/02 22:01:40 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,5 +101,6 @@ int		calc_bits(int max_index);
 int		is_bit_set(int index, int bit_position);
 int		ft_is_valid_number(char *str);
 int		is_int_range(char *str);
+int		ft_sqrt(int num);
 
 #endif

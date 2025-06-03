@@ -56,6 +56,7 @@ SRCETC		= 	ft_free_split.c \
 				ft_is_bit_set.c \
 				ft_is_int_range.c \
 				ft_is_valid_number.c \
+				ft_sqrt.c
 
 SRCALL	=	$(SRC) $(SRCBONUS) $(SRCPRINTF) $(SRCGNL) $(SRCETC)
 OBJ	=	$(SRCALL:.c=.o)

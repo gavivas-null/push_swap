@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 18:20:48 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/05/31 21:55:15 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/06/03 18:21:12 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,9 @@ void	rrr(t_node **a, t_node **b);
 void	sort_two(t_node **a);
 void	sort_three(t_node **a);
 void	sort_five(t_node **a, t_node **b);
-void	sort_radix(t_node **a, t_node **b);
+void	sort_ksort(t_node **a, t_node **b);
+void	ksort_a(t_node **a, t_node **b, int count, int chunk_size);
+void	ksort_b(t_node **a, t_node **b);
 
 //------------------------List------------------------
 t_node	*new_node(int value);
@@ -63,7 +65,10 @@ void	add_back(t_node **lst, t_node *new);
 void	add_front(t_node **lst, t_node *new);
 void	clear_stack(t_node **lst);
 int		count_nodes(t_node *lst);
+int		get_chunk_count(int total);
 int		position_of_index(t_node *stack, int target_index);
+int		find_max_index(t_node *stack);
 void	move_to_top_and_push(t_node **a, t_node **b, int index, int total);
+int		has_index_in_range(t_node *a, int min, int max);
 
 #endif
