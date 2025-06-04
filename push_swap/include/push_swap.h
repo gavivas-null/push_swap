@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 18:20:48 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/06/03 18:21:12 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/06/04 18:18:11 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	sort_two(t_node **a);
 void	sort_three(t_node **a);
 void	sort_five(t_node **a, t_node **b);
 void	sort_ksort(t_node **a, t_node **b);
-void	ksort_a(t_node **a, t_node **b, int count, int chunk_size);
+void	ksort_a(t_node **a, t_node **b, int count);
 void	ksort_b(t_node **a, t_node **b);
 
 //------------------------List------------------------
