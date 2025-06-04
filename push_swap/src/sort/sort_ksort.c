@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 18:01:40 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/06/04 18:31:13 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/06/04 21:48:20 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,20 @@
 void	ksort_a(t_node **a, t_node **b, int range)
 {
 	int	i;
-	int	index;
 
 	i = 0;
 	while (*a)
 	{
-		index = (*a)->index;
-		if (index <= i)
+		if ((*a)->index <= i)
 		{
 			pb(a, b);
-			rb(b);
+			if (*a && (*a)->index > i + range)
+				rr(a, b);
+			else
+				rb(b);
 			i++;
 		}
-		else if (index <= i + range)
+		else if ((*a)->index <= i + range)
 		{
 			pb(a, b);
 			i++;
@@ -39,20 +40,23 @@ void	ksort_a(t_node **a, t_node **b, int range)
 
 void	ksort_b(t_node **a, t_node **b)
 {
-	int	position;
-	int	index;
+	int	pos;
 	int	max;
 	int	count;
 
 	while (*b)
 	{
 		max = find_max_index(*b);
-		position = position_of_index(*b, max);
-		index = (*b)->index;
+		pos = position_of_index(*b, max);
 		count = count_nodes(*b) / 2;
-		if (index == max)
+		if ((*b)->index == max)
 			pa(a, b);
-		else if (position <= count)
+		else if ((*b)->next && (*b)->next->index == max)
+		{
+			sb(b);
+			pa(a, b);
+		}
+		else if (pos <= count)
 			rb(b);
 		else
 			rrb(b);

@@ -6,7 +6,7 @@
 /*   By: gavivas- <gavivas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 17:59:14 by gavivas-          #+#    #+#             */
-/*   Updated: 2025/06/04 18:32:19 by gavivas-         ###   ########.fr       */
+/*   Updated: 2025/06/04 20:29:52 by gavivas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ int	find_max_index(t_node *stack)
 {
 	int	max;
 
+	if (!stack)
+		return (0);
 	max = stack->index;
 	while (stack)
 	{
@@ -57,4 +59,20 @@ int	find_max_index(t_node *stack)
 		stack = stack->next;
 	}
 	return (max);
+}
+
+int	find_min_index(t_node *stack)
+{
+	int	min;
+
+	if (!stack)
+		return (0);
+	min = stack->index;
+	while (stack)
+	{
+		if (stack->index < min)
+			min = stack->index;
+		stack = stack->next;
+	}
+	return (min);
 }
